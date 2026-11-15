@@ -48,11 +48,26 @@ db.serialize(() => {
   db.run(`INSERT INTO users VALUES (1, 'admin', 'admin123', 'admin', 'admin@crm.local')`);
   db.run(`INSERT INTO users VALUES (2, 'alice', 'alice123', 'user', 'alice@crm.local')`);
   db.run(`INSERT INTO users VALUES (3, 'bob', 'bob123', 'user', 'bob@crm.local')`);
-  db.run(`INSERT INTO customers VALUES (1, 'Acme Corp', 'contact@acme.com', '+380501112233', 'Important client', 1)`);
-  db.run(`INSERT INTO customers VALUES (2, 'Beta LLC', 'info@beta.com', '+380672223344', 'Follow up next week', 2)`);
-  db.run(`INSERT INTO customers VALUES (3, 'Gamma Inc', 'hello@gamma.io', '+380933334455', 'Potential upsell', 3)`);
+  db.run(`INSERT INTO users VALUES (4, 'carol', 'carol123', 'user', 'carol@crm.local')`);
+  db.run(`INSERT INTO users VALUES (5, 'dave', 'dave123', 'user', 'dave@crm.local')`);
+
+  db.run(`INSERT INTO customers VALUES (1, 'Acme Corp', 'contact@acme.com', '+380501112233', 'Strategic account. Q4 renewal.', 1)`);
+  db.run(`INSERT INTO customers VALUES (2, 'Beta LLC', 'info@beta.com', '+380672223344', 'Follow up next week on pricing.', 2)`);
+  db.run(`INSERT INTO customers VALUES (3, 'Gamma Inc', 'hello@gamma.io', '+380933334455', 'Potential upsell to Enterprise.', 3)`);
+  db.run(`INSERT INTO customers VALUES (4, 'Delta Soft', 'sales@deltasoft.io', '+380441112233', 'Warm lead from conference.', 2)`);
+  db.run(`INSERT INTO customers VALUES (5, 'Epsilon Media', 'partners@epsilon.media', '+380672229988', 'Needs onboarding checklist.', 4)`);
+  db.run(`INSERT INTO customers VALUES (6, 'Zeta Logistics', 'ops@zetalog.com', '+380503334455', 'Multi-site rollout discussion.', 5)`);
+  db.run(`INSERT INTO customers VALUES (7, 'Omega Health', 'it@omega.health', '+380931112244', 'Compliance review pending.', 1)`);
+  db.run(`INSERT INTO customers VALUES (8, 'Nova Retail', 'buyer@novaretail.ua', '+380441234567', 'Seasonal campaign interest.', 3)`);
+
   db.run(`INSERT INTO deals VALUES (1, 'Enterprise license', 15000, 1, 'negotiation')`);
   db.run(`INSERT INTO deals VALUES (2, 'Support package', 3200, 2, 'won')`);
+  db.run(`INSERT INTO deals VALUES (3, 'Pilot integration', 4800, 3, 'proposal')`);
+  db.run(`INSERT INTO deals VALUES (4, 'Annual subscription', 9600, 4, 'negotiation')`);
+  db.run(`INSERT INTO deals VALUES (5, 'Onboarding package', 2100, 5, 'won')`);
+  db.run(`INSERT INTO deals VALUES (6, 'Multi-site license', 28000, 6, 'qualification')`);
+  db.run(`INSERT INTO deals VALUES (7, 'Compliance add-on', 5500, 7, 'proposal')`);
+  db.run(`INSERT INTO deals VALUES (8, 'Campaign toolkit', 1800, 8, 'lost')`);
 });
 
 if (!fs.existsSync('uploads')) {

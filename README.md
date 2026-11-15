@@ -57,6 +57,8 @@ Open **http://localhost:3000**
 | admin    | admin123  | admin |
 | alice    | alice123  | user  |
 | bob      | bob123    | user  |
+| carol    | carol123  | user  |
+| dave     | dave123   | user  |
 
 ## Configuration
 
@@ -130,6 +132,34 @@ crewline/
 4. Restrict integration tokens and outbound URLs.
 5. Put a reverse proxy (nginx / Caddy) in front with rate limits.
 
+
+
+## Test data
+
+On startup the in-memory database is seeded with:
+
+| Entity | Count | Notes |
+|--------|------:|-------|
+| Users | 5 | `admin`, `alice`, `bob`, `carol`, `dave` (password = username + `123`) |
+| Customers | 8 | Acme, Beta, Gamma, Delta, Epsilon, Zeta, Omega, Nova |
+| Deals | 8 | Statuses: negotiation, won, proposal, qualification, lost |
+
+Machine-readable fixtures (for Postman, scripts, LLM harnesses):
+
+| File | Content |
+|------|---------|
+| [`test/fixtures/users.json`](test/fixtures/users.json) | Team accounts |
+| [`test/fixtures/customers.json`](test/fixtures/customers.json) | Customer rows |
+| [`test/fixtures/deals.json`](test/fixtures/deals.json) | Pipeline rows |
+| [`test/fixtures/api-samples.json`](test/fixtures/api-samples.json) | Sample requests per endpoint + seed snapshot |
+
+Smoke test against a running server:
+
+```bash
+npm start &
+./scripts/smoke-api.sh
+# or: BASE_URL=http://localhost:3000 ./scripts/smoke-api.sh
+```
 
 ## API specification (OpenAPI)
 

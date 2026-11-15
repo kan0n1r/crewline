@@ -1,0 +1,7 @@
+[
+  { "username": "admin", "password": "admin123", "role": "admin", "email": "admin@crm.local" },
+  { "username": "alice", "password": "alice123", "role": "user", "email": "alice@crm.local" },
+  { "username": "bob", "password": "bob123", "role": "user", "email": "bob@crm.local" },
+  { "username": "carol", "password": "carol123", "role": "user", "email": "carol@crm.local" },
+  { "username": "dave", "password": "dave123", "role": "user", "email": "dave@crm.local" }
+]

@@ -1,0 +1,10 @@
+[
+  { "title": "Enterprise license", "amount": 15000, "customer_id": 1, "status": "negotiation" },
+  { "title": "Support package", "amount": 3200, "customer_id": 2, "status": "won" },
+  { "title": "Pilot integration", "amount": 4800, "customer_id": 3, "status": "proposal" },
+  { "title": "Annual subscription", "amount": 9600, "customer_id": 4, "status": "negotiation" },
+  { "title": "Onboarding package", "amount": 2100, "customer_id": 5, "status": "won" },
+  { "title": "Multi-site license", "amount": 28000, "customer_id": 6, "status": "qualification" },
+  { "title": "Compliance add-on", "amount": 5500, "customer_id": 7, "status": "proposal" },
+  { "title": "Campaign toolkit", "amount": 1800, "customer_id": 8, "status": "lost" }
+]

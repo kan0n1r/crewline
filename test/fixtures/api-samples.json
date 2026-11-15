@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "baseUrl": "http://localhost:3000",
+    "description": "Sample request/response payloads for Crewline API testing"
+  },
+  "auth": {
+    "login_admin": {
+      "method": "POST",
+      "path": "/api/login",
+      "body": { "username": "admin", "password": "admin123" }
+    },
+    "login_alice": {
+      "method": "POST",
+      "path": "/api/login",
+      "body": { "username": "alice", "password": "alice123" }
+    },
+    "login_bob": {
+      "method": "POST",
+      "path": "/api/login",
+      "body": { "username": "bob", "password": "bob123" }
+    },
+    "login_invalid": {
+      "method": "POST",
+      "path": "/api/login",
+      "body": { "username": "alice", "password": "wrong" },
+      "expectStatus": 401
+    }
+  },
+  "customers": {
+    "list": { "method": "GET", "path": "/api/customers" },
+    "get_by_id": { "method": "GET", "path": "/api/customers/1" },
+    "update_notes": {
+      "method": "POST",
+      "path": "/api/customers/2/notes",
+      "body": { "notes": "Called on Monday. Decision expected Friday." }
+    }
+  },
+  "search": {
+    "by_name": { "method": "GET", "path": "/api/search?q=Acme" },
+    "by_notes": { "method": "GET", "path": "/api/search?q=compliance" },
+    "empty": { "method": "GET", "path": "/api/search?q=" }
+  },
+  "deals": {
+    "list": { "method": "GET", "path": "/api/deals" }
+  },
+  "files": {
+    "export_csv": { "method": "GET", "path": "/api/export?format=csv" }
+  },
+  "integrations": {
+    "slack": {
+      "method": "POST",
+      "path": "/api/integrations/slack",
+      "body": { "message": "Deal #5 marked as won", "channel": "#sales" }
+    },
+    "powerbi": { "method": "GET", "path": "/api/integrations/powerbi" },
+    "gdrive": { "method": "GET", "path": "/api/integrations/gdrive?folder=contracts" },
+    "fetch": {
+      "method": "POST",
+      "path": "/api/integrations/fetch",
+      "body": { "url": "https://httpbin.org/get" }
+    }
+  },
+  "team": {
+    "list_users": { "method": "GET", "path": "/api/users" },
+    "update_profile": {
+      "method": "POST",
+      "path": "/api/users/update",
+      "body": { "id": 2, "email": "alice.updated@crm.local", "role": "user" }
+    }
+  },
+  "system": {
+    "health": { "method": "GET", "path": "/api/health" },
+    "debug": { "method": "GET", "path": "/api/debug" },
+    "me": { "method": "GET", "path": "/api/me" }
+  },
+  "seed_snapshot": {
+    "users": [
+      { "id": 1, "username": "admin", "password": "admin123", "role": "admin", "email": "admin@crm.local" },
+      { "id": 2, "username": "alice", "password": "alice123", "role": "user", "email": "alice@crm.local" },
+      { "id": 3, "username": "bob", "password": "bob123", "role": "user", "email": "bob@crm.local" },
+      { "id": 4, "username": "carol", "password": "carol123", "role": "user", "email": "carol@crm.local" },
+      { "id": 5, "username": "dave", "password": "dave123", "role": "user", "email": "dave@crm.local" }
+    ],
+    "customers": [
+      { "id": 1, "name": "Acme Corp", "email": "contact@acme.com", "owner_id": 1 },
+      { "id": 2, "name": "Beta LLC", "email": "info@beta.com", "owner_id": 2 },
+      { "id": 3, "name": "Gamma Inc", "email": "hello@gamma.io", "owner_id": 3 },
+      { "id": 4, "name": "Delta Soft", "email": "sales@deltasoft.io", "owner_id": 2 },
+      { "id": 5, "name": "Epsilon Media", "email": "partners@epsilon.media", "owner_id": 4 },
+      { "id": 6, "name": "Zeta Logistics", "email": "ops@zetalog.com", "owner_id": 5 },
+      { "id": 7, "name": "Omega Health", "email": "it@omega.health", "owner_id": 1 },
+      { "id": 8, "name": "Nova Retail", "email": "buyer@novaretail.ua", "owner_id": 3 }
+    ],
+    "deals": [
+      { "id": 1, "title": "Enterprise license", "amount": 15000, "customer_id": 1, "status": "negotiation" },
+      { "id": 2, "title": "Support package", "amount": 3200, "customer_id": 2, "status": "won" },
+      { "id": 3, "title": "Pilot integration", "amount": 4800, "customer_id": 3, "status": "proposal" },
+      { "id": 4, "title": "Annual subscription", "amount": 9600, "customer_id": 4, "status": "negotiation" },
+      { "id": 5, "title": "Onboarding package", "amount": 2100, "customer_id": 5, "status": "won" },
+      { "id": 6, "title": "Multi-site license", "amount": 28000, "customer_id": 6, "status": "qualification" },
+      { "id": 7, "title": "Compliance add-on", "amount": 5500, "customer_id": 7, "status": "proposal" },
+      { "id": 8, "title": "Campaign toolkit", "amount": 1800, "customer_id": 8, "status": "lost" }
+    ]
+  }
+}

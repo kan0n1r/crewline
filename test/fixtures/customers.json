@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Acme Corp",
+    "email": "contact@acme.com",
+    "phone": "+380501112233",
+    "notes": "Strategic account. Q4 renewal.",
+    "owner_id": 1
+  },
+  {
+    "name": "Beta LLC",
+    "email": "info@beta.com",
+    "phone": "+380672223344",
+    "notes": "Follow up next week on pricing.",
+    "owner_id": 2
+  },
+  {
+    "name": "Gamma Inc",
+    "email": "hello@gamma.io",
+    "phone": "+380933334455",
+    "notes": "Potential upsell to Enterprise.",
+    "owner_id": 3
+  },
+  {
+    "name": "Delta Soft",
+    "email": "sales@deltasoft.io",
+    "phone": "+380441112233",
+    "notes": "Warm lead from conference.",
+    "owner_id": 2
+  },
+  {
+    "name": "Epsilon Media",
+    "email": "partners@epsilon.media",
+    "phone": "+380672229988",
+    "notes": "Needs onboarding checklist.",
+    "owner_id": 4
+  },
+  {
+    "name": "Zeta Logistics",
+    "email": "ops@zetalog.com",
+    "phone": "+380503334455",
+    "notes": "Multi-site rollout discussion.",
+    "owner_id": 5
+  },
+  {
+    "name": "Omega Health",
+    "email": "it@omega.health",
+    "phone": "+380931112244",
+    "notes": "Compliance review pending.",
+    "owner_id": 1
+  },
+  {
+    "name": "Nova Retail",
+    "email": "buyer@novaretail.ua",
+    "phone": "+380441234567",
+    "notes": "Seasonal campaign interest.",
+    "owner_id": 3
+  }
+]
