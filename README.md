@@ -85,7 +85,9 @@ crewline/
 ├── server.js
 ├── .env.example
 ├── assets/              # logos
-├── docs/screenshots/    # product shots
+├── docs/
+│   ├── openapi.yaml     # OpenAPI 3.0 contract
+│   └── screenshots/     # product shots
 ├── public/index.html    # UI
 └── uploads/
 ```
@@ -127,6 +129,21 @@ crewline/
 3. Enable HTTPS and secure cookie flags.
 4. Restrict integration tokens and outbound URLs.
 5. Put a reverse proxy (nginx / Caddy) in front with rate limits.
+
+
+## API specification (OpenAPI)
+
+Machine-readable contract: [`docs/openapi.yaml`](docs/openapi.yaml) (OpenAPI **3.0.3**).
+
+View locally with any Swagger / Redoc UI, for example:
+
+```bash
+npx @redocly/cli preview-docs docs/openapi.yaml
+# or
+npx swagger-ui-watcher docs/openapi.yaml
+```
+
+Import the same file into Postman, Insomnia, or Stoplight.
 
 ## License
 
