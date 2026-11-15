@@ -1,7 +1,7 @@
 {
-  "name": "team-crm",
+  "name": "crewline",
   "version": "1.0.0",
-  "description": "Lightweight CRM for small teams",
+  "description": "Crewline \u2014 modern CRM for small teams",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="800" fill="url(#bg)"/>
+  <rect x="440" y="180" width="400" height="420" rx="16" fill="#fff"/>
+  <rect x="472" y="220" width="48" height="48" rx="12" fill="#2563EB"/>
+  <circle cx="486" cy="238" r="4" fill="#fff"/>
+  <circle cx="506" cy="238" r="4" fill="#fff"/>
+  <path d="M480 252c0-6 5-11 12-11s12 5 12 11" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="536" y="252" font-family="system-ui,sans-serif" font-size="28" font-weight="700" fill="#0f172a">Crewline</text>
+  <text x="472" y="300" font-family="system-ui,sans-serif" font-size="14" fill="#64748b">Sign in to manage customers and deals</text>
+  <text x="472" y="340" font-family="system-ui,sans-serif" font-size="12" fill="#64748b" font-weight="600">USERNAME</text>
+  <rect x="472" y="348" width="336" height="40" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="484" y="374" font-family="system-ui,sans-serif" font-size="14" fill="#1e293b">alice</text>
+  <text x="472" y="420" font-family="system-ui,sans-serif" font-size="12" fill="#64748b" font-weight="600">PASSWORD</text>
+  <rect x="472" y="428" width="336" height="40" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="484" y="454" font-family="system-ui,sans-serif" font-size="14" fill="#94a3b8">••••••••</text>
+  <rect x="472" y="492" width="336" height="44" rx="8" fill="#2563EB"/>
+  <text x="600" y="520" font-family="system-ui,sans-serif" font-size="15" font-weight="600" fill="#fff" text-anchor="middle">Sign in</text>
+  <text x="640" y="560" font-family="system-ui,sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Demo · alice / bob / admin</text>
+</svg>
